@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Complaints Flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -7,7 +7,18 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+
 library(flexdashboard)
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(glue)
+library(plotly)
+library(DT)
+library(kableExtra)
+library(htmlwidgets)
+library(htmltools)
+library(readxl)
 ```
 
 Column {data-width=650}
