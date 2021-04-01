@@ -78,5 +78,15 @@ fig
 
 ```{r}
 
+
+fig <- plot_ly(complaints)
+  x = c(company)
+  y = c(count(complaints))
+  type = "bar"
+  color = "red"
+fig <- fig %>% layout(title = "Companies That Gave Monetary Relief",
+         xaxis = list(title = "Company"),
+         yaxis = list (title = "Gave Monetary Relief"))
+fig
 ```
 
