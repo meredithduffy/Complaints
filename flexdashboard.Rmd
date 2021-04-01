@@ -24,22 +24,57 @@ library(readxl)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### States and Number of Complaints
 
 ```{r}
+
+
+
+fig <- plot_ly(complaints)
+  x = c(state)
+  y = c(count(complaints))
+  type = "bar"
+  color = "red"
+fig <- fig %>% layout(title = "States and Number of Complaints",
+         xaxis = list(title = "States"),
+         yaxis = list (title = "Number of Complaints"))
+fig
+
+
+
+### R told me to make a scatter plot instead
+fig <- plot_ly(data = complaints, x = ~state, y = ~complaints)
+
+fig 
+
+
 
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Companies and Number of Complaints
 
 ```{r}
 
+
+
+fig <- plot_ly(complaints)
+  x = c(company)
+  y = c(count(complaints))
+  type = "bar"
+  color = "red"
+fig <- fig %>% layout(title = "Companies and Number of Complaints",
+         xaxis = list(title = "Companies"),
+         yaxis = list (title = "Number of Complaints"))
+fig
+
+
+
 ```
 
-### Chart C
+### Companies That Gave Monetary Relief
 
 ```{r}
 
